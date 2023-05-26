@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"></import>
+        <variable
+            name="property"
+            type="com.example.edwfrefref.network.MarsProperty" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:photoUrl="@{property.imgSrc}"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/backgrounds/scenic"
+        ></ImageView>
+
+
+
+        <ImageView
+            android:id="@+id/Mars_Property_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/ic_for_sale_outline"
+            android:src="@drawable/ic_for_sale_outline"
+            android:layout_gravity="bottom|end"
+            android:padding="5dp"
+            android:visibility="@{property.rental? View.GONE : View.VISIBLE}">
+
+        </ImageView>
+
+    </FrameLayout>
+
+</layout>
